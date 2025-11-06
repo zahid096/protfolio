@@ -201,6 +201,43 @@ section {
     color: var(--bg-dark);
 }
 
+/* CV Button Styles */
+.btn-cv {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(45deg, #9775fa, #9775fa);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+    box-shadow: 0 5px 15px rgba(151, 117, 250, 0.3);
+}
+
+.btn-cv:hover {
+    background: linear-gradient(45deg, #7c5cff, #9775fa);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(151, 117, 250, 0.4);
+    color: white;
+}
+
+/* Mobile responsive */
+@media (max-width: 576px) {
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-container a {
+        margin-left: 0 !important;
+    }
+}
+
 .scroll-down {
     position: absolute;
     bottom: 50px;
