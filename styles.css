@@ -1,6 +1,6 @@
 :root {
-    --bg-dark: #121212;
-    --bg-darker: #0a0a0a;
+    --bg-dark: #1e1d1d;
+    --bg-darker: #0a0a0a7c;
     --text-primary: #f5f5f5;
     --text-secondary: #b0b0b0;
     --accent-teal: #20c997;
@@ -38,12 +38,12 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1.5rem 5%;
+    padding: 1.00rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background-color: rgba(10, 10, 10, 0.8);
+    background-color: rgba(1, 1, 1, 0.806);
     backdrop-filter: blur(10px);
     transition: var(--transition);
 }
@@ -241,11 +241,13 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
+
 }
 
 .about-text p {
     margin-bottom: 1.5rem;
     color: var(--text-secondary);
+    text-align: justify;
 }
 
 .about-text p.highlight {
@@ -275,6 +277,7 @@ section {
 .education-item p {
     color: var(--text-secondary);
     font-size: 0.9rem;
+    text-align: justify;
 }
 
 .skills {
@@ -309,6 +312,81 @@ section {
 .skill.js:hover {
     background-color: #f7df1e;
     color: var(--bg-dark);
+}
+
+/* Responsive Design  */
+@media (min-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        max-width: 800px;
+    }
+
+    .about-text p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    .about-text p.highlight {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        max-width: 900px;
+    }
+
+    .about-text {
+        padding: 0 2rem;
+    }
+
+    .about-text p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-content {
+        gap: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .education-item {
+        padding: 1rem;
+    }
+
+    .skills-grid {
+        gap: 0.6rem;
+    }
+
+    .skill {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-text {
+        padding: 0 0.5rem;
+    }
+
+    .about-text p {
+        font-size: 0.95rem;
+        text-align: justify;
+    }
+
+    .education-item {
+        padding: 0.8rem;
+    }
+
+    .skills-grid {
+        justify-content: flex-start;
+    }
 }
 
 /* Projects Section */
@@ -355,6 +433,7 @@ section {
     color: var(--text-secondary);
     margin-bottom: 1rem;
     font-size: 0.9rem;
+
 }
 
 .project-tech {
@@ -511,17 +590,17 @@ section {
 /* Footer */
 footer {
     text-align: center;
-    padding: 2rem;
-    background-color: #080808;
+    padding: 0.8rem;
+    background-color: rgba(1, 1, 1, 0.806);
     color: var(--text-secondary);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .social-links a {
